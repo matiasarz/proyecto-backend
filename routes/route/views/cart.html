@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/083810b2a0.js" crossorigin="anonymous"></script>
+    <title>eCommerce - carrito</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/productos">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="/log-in"><i class="fa-solid fa-arrow-right-to-bracket" id="iconUser"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="cartViewContainer">
+        <section class="cartContainer">
+        </section>
+        <section class="cartFormContainer">
+            <div>
+                <form action="/api/carrito" method="POST" id="cartFormPost">
+                    <label>Nombre del carrito</label>
+                    <div><input type="text" name="name" placeholder="Ingrese nombre del carrito" required></div>
+                    <div id="createCart"><button>Crear carrito</button></div>
+                </form>      
+            </div>
+        </section>
+    </main>
+
+    <template id="templateCard">
+        <div class="card">
+            <h1></h1>
+            <img src="" alt="">
+            <p></p>
+            <span></span>
+            <div class="buttonsEdit">
+                <button class="delete">Eliminar</button>
+                <button class="addCart">Agregar a carrito</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="templateCart">
+        <article class="cardCart">
+            <div class="cart">
+                <h1>name</h1>
+                <ul>
+                 
+                </ul>
+            </div>
+            <div class="iconDeleteCart">
+                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-eye"></i>
+            </div>
+        </article>
+    </template>
+
+    <template id="templateListProduct">
+        <article class="listProduct">
+            <div class="product">
+                <img src="" alt="imageTitle">
+                <h1>Title</h1>
+                <h3>Price</h3>
+                <h4>Stock</h4>
+                <button class="deleteListProduct">Eliminar</button>
+            </div>
+        </article>
+    </template>
+
+    <template id="templateTitleListProduct">
+        <ul class="titleListProduct">
+            <li>Detalle</li>
+            <li>Nombre</li>
+            <li>Precio</li>
+            <li>Stock</li>
+        </ul>
+    </template>
+
+    <script src="../index.js"></script>
+    <script src="../js/appCart.js" type="module"></script>
+    <script src="../js/httpMethods.js" type="no-module"></script>
+</body>
+</html>

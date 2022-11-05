@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/083810b2a0.js" crossorigin="anonymous"></script>
+    <title>eCommerce - productos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="/log-in"><i class="fa-solid fa-arrow-right-to-bracket" id="iconUser"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cardContainer">
+            
+        </section>
+    </main>
+
+    <template id="templateCard">
+        <div class="card">
+            <h1></h1>
+            <img src="" alt="">
+            <p></p>
+            <span></span>
+            <div class="buttonsEdit">
+                <button class="delete">Eliminar</button>
+                <form method="POST" class="formAddToCart">
+                    <select class="selectCart">
+                    
+                    </select>
+                    <button class="addCart" type="submit">Añadir a carrito</button>
+                </form>
+            </div>
+        </div>
+    </template>
+    <script src="../index.js"></script>
+    <script src='../js/appProducts.js' type="module"></script>
+    <script src="../js/httpMethods.js" type="no-module"></script>
+</body>
+</html>

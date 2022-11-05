@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/083810b2a0.js" crossorigin="anonymous"></script>
+    <title>eCommerce - Log in</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/productos">Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="form" class="logInContainer">
+                <h1>Iniciar sesión</h1>
+                <div>
+                    <input type="text" placeholder="Nombre" id="inputName" required>
+                </div>
+                <div>
+                    <select id="user">
+                        <option value="usuario">Usuario</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Ingresar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="logIn.js"></script>
+</body>
+</html>
