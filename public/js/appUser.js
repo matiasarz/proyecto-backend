@@ -22,7 +22,7 @@ const sendDataUser = (object) => {
 formGetUser.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const value = inputGetIDUser.value;
-	fetch(`http://localhost:8080/api/productos/${value}`)
+	fetch(`/api/productos/${value}`)
 		.then((res) => res.json())
 		.then((data) => {
 			sendDataUser(data);
@@ -31,7 +31,7 @@ formGetUser.addEventListener('submit', (e) => {
 });
 
 getAllUser.addEventListener('click', (e) => {
-	fetch(`http://localhost:8080/api/productos`)
+	fetch(`/api/productos`)
 		.then((res) => res.json())
 		.then((data) => {
 			sendDataUser(data);

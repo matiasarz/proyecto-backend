@@ -34,7 +34,7 @@ const sendData = (object) => {
 formGet.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const value = inputGetID.value;
-	fetch(`http://localhost:8080/api/productos/${value}`)
+	fetch(`/api/productos/${value}`)
 		.then((res) => res.json())
 		.then((data) => {
 			sendData(data);
@@ -43,7 +43,7 @@ formGet.addEventListener('submit', (e) => {
 });
 
 getAll.addEventListener('click', (e) => {
-	fetch(`http://localhost:8080/api/productos`)
+	fetch(`/api/productos`)
 		.then((res) => res.json())
 		.then((data) => {
 			sendData(data);
@@ -68,7 +68,7 @@ formPut.addEventListener('submit', (e) => {
 
 	const product = JSON.stringify(updateProduct);
 
-	http.put(`http://localhost:8080/api/productos/${inputID.value}`, product);
+	http.put(`/api/productos/${inputID.value}`, product);
 
 	inputID.value = '';
 	inputName.value = '';
