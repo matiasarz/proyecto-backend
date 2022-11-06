@@ -1,9 +1,9 @@
 const { express, Save } = require('./index.js');
 const Router = express.Router;
 
-const listNames = new Save('Names');
-
 const apiRouterNames = Router();
+
+const listNames = new Save('Names');
 
 apiRouterNames.post('/names', (req, res) => {
 	const body = req.body;
