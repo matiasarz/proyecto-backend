@@ -229,4 +229,26 @@ class Cart {
 	}
 }
 
-module.exports = { Product, Cart, express };
+class Save {
+	constructor(name) {
+		this.name = name;
+		this.fs = fs;
+	}
+
+	saveName(name) {
+		try {
+			const listName = this.fs.readFileSync(`${this.name}.txt`, 'utf-8');
+			const arrayListName = JSON.parse(listName);
+			arrayListName.push(name);
+
+			this.fs.writeFileSync(
+				`${this.name}.txt`,
+				JSON.stringify(arrayListName)
+			);
+		} catch (e) {
+			this.fs.writeFileSync(`${this.name}.txt`, JSON.stringify([name]));
+		}
+	}
+}
+
+module.exports = { Product, Cart, Save, express };

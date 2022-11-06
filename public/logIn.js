@@ -3,7 +3,7 @@ const inputName = document.getElementById('inputName');
 const user = document.getElementById('user');
 
 form.addEventListener('submit', (e) => {
-	e.preventDefault();
+	// e.preventDefault();
 	const newUser = {
 		name: inputName.value,
 		userType: user.value,
